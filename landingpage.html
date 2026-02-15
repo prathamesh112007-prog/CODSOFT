@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pro Landing Page</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ===== Header ===== */
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(15,23,42,0.8);
+    backdrop-filter:blur(12px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+header h2{
+    font-weight:700;
+    letter-spacing:1px;
+    color:#38bdf8;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-weight:500;
+    position:relative;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:#38bdf8;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* ===== Hero ===== */
+.hero{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 20px;
+    background: radial-gradient(circle at top,#1e3a8a,#020617);
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+    background:linear-gradient(to right,#38bdf8,#818cf8);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:fadeDown 1s ease-out;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:35px;
+    color:#cbd5e1;
+    animation:fadeUp 1.2s ease-out;
+}
+
+.btn{
+    padding:14px 32px;
+    border-radius:40px;
+    background:linear-gradient(to right,#38bdf8,#6366f1);
+    color:white;
+    font-weight:600;
+    text-decoration:none;
+    box-shadow:0 10px 25px rgba(56,189,248,0.4);
+    transition:0.3s;
+    animation:fadeUp 1.4s ease-out;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(56,189,248,0.6);
+}
+
+/* ===== Features ===== */
+.features{
+    display:flex;
+    gap:30px;
+    padding:80px 8%;
+    background:#020617;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.feature-box{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    padding:30px;
+    width:300px;
+    border-radius:18px;
+    text-align:center;
+    backdrop-filter:blur(12px);
+    transition:0.4s;
+}
+
+.feature-box:hover{
+    transform:translateY(-10px) scale(1.03);
+    border-color:#38bdf8;
+    box-shadow:0 15px 35px rgba(56,189,248,0.2);
+}
+
+.feature-box h3{
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+/* ===== About ===== */
+.about{
+    padding:80px 8%;
+    text-align:center;
+    background:#0f172a;
+}
+
+.about h2{
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.about p{
+    max-width:700px;
+    margin:auto;
+    color:#cbd5e1;
+}
+
+/* ===== Footer ===== */
+footer{
+    text-align:center;
+    padding:25px;
+    background:#020617;
+    color:#94a3b8;
+    border-top:1px solid rgba(255,255,255,0.1);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeDown{
+    from{opacity:0; transform:translateY(-40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* ===== Responsive ===== */
+@media(max-width:768px){
+    .hero h1{font-size:38px;}
+    nav{display:none;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>Build WEB</h2>
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Build Stunning Modern Websites</h1>
+    <p>Create professional designs with powerful HTML & CSS skills.</p>
+    <a href="#" class="btn">Get Started</a>
+</section>
+
+<section class="features">
+    <div class="feature-box">
+        <h3>Fast Development</h3>
+        <p>Build websites quickly with optimized layouts and reusable components.</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>Responsive Design</h3>
+        <p>Looks perfect on desktop, tablet, and mobile devices.</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>Modern UI</h3>
+        <p>Clean visuals, smooth animations, and professional styling.</p>
+    </div>
+</section>
+
+<section class="about">
+    <h2>About This Project</h2>
+    <p>
+        This landing page demonstrates advanced layout techniques,
+        modern UI trends, and animation effects using only HTML and CSS —
+        exactly how professional developers build beautiful interfaces.
+    </p>
+</section>
+<section class="Contact"></section>
+<footer>
+    <p>© 2026 MyBrand. Crafted with ❤️ by a Pro Developer</p>
+</footer>
+
+</body>
+</html>
